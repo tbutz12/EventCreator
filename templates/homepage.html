@@ -1,0 +1,24 @@
+<h1>Events Homepage!</h1>
+<br>
+<h3>List of Events:</h3>
+<ul>
+	{% for e in list %}
+	<div>
+		<li>Event Host: {{e.eventHost}}</li>
+		<li>Event Name: {{ e.eventName }}</li>
+		<li>Event Description: {{ e.eventDescription }}</li>
+		<li>Event Start Time: {{ e.eventStartTime }}</li>
+		<li>Event End Time: {{ e.eventEndTime }}</li>
+	</div>
+	<br>
+	<br>
+		{% endfor %}
+</ul>
+<a href='{{url_for("login")}}'>Click here to return to return to login!</a>
+<br>
+{% extends "base.html" %}
+
+{% block title %}Homepage! - {{ super() }}{% endblock %}
+
+{% block body %}
+{% endblock %}
